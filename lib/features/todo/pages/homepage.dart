@@ -9,6 +9,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:taskapp/common/utils/constants.dart';
 import 'package:taskapp/common/widgets/appstyle.dart';
 import 'package:taskapp/common/widgets/custom_text.dart';
+import 'package:taskapp/common/widgets/expansion_tile.dart';
 import 'package:taskapp/common/widgets/height_spacer.dart';
 import 'package:taskapp/common/widgets/reusable_text.dart';
 
@@ -185,7 +186,22 @@ class _HomePageState extends ConsumerState<HomePage>
                     ],
                   ),
                 ),
-              )
+              ),
+              const HieghtSpacer(hieght: 20),
+              const XpansionTile(
+                text: "Tommorrow's Task",
+                text2: "Tommorrow's Tasks are shown here",
+                children: [],
+              ),
+              const HieghtSpacer(hieght: 20),
+              XpansionTile(
+                text: DateTime.now()
+                    .add(const Duration(days: 2))
+                    .toString()
+                    .substring(5, 10),
+                text2: "Tommorrow's Tasks are shown here",
+                children: [],
+              ),
             ],
           ),
         ),

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:taskapp/common/widgets/expansion_tile.dart';
 import 'package:taskapp/features/onboarding/pages/onboarding.dart';
 import 'package:taskapp/features/todo/pages/homepage.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             themeMode: ThemeMode.dark,
-            home: const OnBoarding(),
+            home: const HomePage(),
           );
         });
   }
